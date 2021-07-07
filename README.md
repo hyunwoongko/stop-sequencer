@@ -1,2 +1,2 @@
-# stop_sequence
-Implementation of Stop Sequence tokens for Huggingface Transformers
+# stop sequencer
+Implementation of stop sequence tokens for Huggingface Transformers
