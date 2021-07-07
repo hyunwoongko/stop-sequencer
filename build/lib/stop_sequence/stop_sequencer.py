@@ -1,6 +1,6 @@
 from copy import deepcopy
 from typing import Optional, List
-from stop_sequence.stopping_criteria import StopSequenceCriteria
+from stop_sequencer.stopping_criteria import StopSequenceCriteria
 
 
 class StopSeqeuencer(object):
