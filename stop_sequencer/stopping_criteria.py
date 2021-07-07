@@ -1,7 +1,6 @@
-from typing import List
-
 import torch
-from transformers import AutoTokenizer
+
+from typing import List
 from transformers import StoppingCriteria
 
 
@@ -25,9 +24,6 @@ def is_subset(l, s):
                     subset = True
 
     return subset
-
-
-tokenizer = AutoTokenizer.from_pretrained("gpt2")
 
 
 class StopSequenceCriteria(StoppingCriteria):
@@ -68,7 +64,7 @@ class StopSequenceCriteria(StoppingCriteria):
         for text in self.stop_texts:
             stop = []
             for input_id in new_input_ids:
-                decoded = tokenizer.decode(input_id)
+                decoded = self.tokenizer.decode(input_id)
                 stop.append(text in decoded)
             stops.append(all(stop))
 

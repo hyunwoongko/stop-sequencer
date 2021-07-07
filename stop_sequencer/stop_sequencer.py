@@ -1,8 +1,7 @@
-from copy import deepcopy
-from typing import Optional, List
-
 import torch
 
+from copy import deepcopy
+from typing import Optional, List
 from stop_sequencer.stopping_criteria import StopSequenceCriteria
 
 
