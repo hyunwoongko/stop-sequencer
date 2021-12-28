@@ -1,6 +1,6 @@
 # Stop Sequencer
-- Implementation for stop sequencer for Huggingface Transformers
-- Because there is a limitation in implementation, post-processing must be used together.
+- Implementation of stop sequencer for Huggingface Transformers.
+- Note post-processing must be used together because limitation of transformers implementation.
 <br><br>
   
 ## 1. Installation
