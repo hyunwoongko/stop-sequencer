@@ -42,7 +42,6 @@ ive been watching TV for a long time. Ryan: I have been watching TV since I was 
 <br><br>
 
 ### 2.2. Generation with StopSequencer
-If you look at the following generation result, you can see that `Ryan: I have` is contained in the generation result (`ive been watching TV for a long time. Ryan: I have`) and then generation is finished. The generation can be terminated after stop text (`Ryan: I have`) is generated because of the limitation of Huggingface Transformers.
 
 ```python
 from stop_sequencer import StopSequencer
@@ -74,6 +73,7 @@ print(outputs)
 ```
 ive been watching TV for a long time. Ryan: I have
 ```
+If you look at the above generation result, you can see that `Ryan: I have` is contained in the generation result (`ive been watching TV for a long time. Ryan: I have`) and then generation is finished. The generation can be terminated after stop text (`Ryan: I have`) is generated because of the limitation of Huggingface Transformers.
 <br><br>
 
 ### 3. Generation with StopSequencer + post-processing
