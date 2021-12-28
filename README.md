@@ -43,7 +43,7 @@ ive been watching TV for a long time. Ryan: I have been watching TV since I was 
 
 ### 2.2. Generation with StopSequencer
 - If you look at the example, you can see that `Ryan: I have` is generated and then generation is finished.
-- Due to the limitation of Huggingface Transformers, after stop texts are generated, the generation can be terminated by checking conditions.
+- Due to the limitation of Huggingface Transformers, after stop text (Ryan: ...) is generated, the generation can be terminated by checking conditions.
 
 ```python
 from stop_sequencer import StopSequencer
