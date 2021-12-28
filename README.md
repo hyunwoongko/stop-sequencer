@@ -73,7 +73,7 @@ print(outputs)
 ```
 ive been watching TV for a long time. Ryan: I have
 ```
-If you look at the above generation result, you can see that `Ryan: I have` is contained in the generation result and then generation is finished. The generation can be terminated after stop text (`Ryan: I have`) is generated because of the limitation of Huggingface Transformers.
+You can see that `Ryan: I have` is contained in the generation result and then generation is finished. The generation can be terminated after stop text (`Ryan: I have`) is generated because of the limitation of Huggingface Transformers.
 <br><br>
 
 ### 3. Generation with StopSequencer + post-processing
