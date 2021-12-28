@@ -42,8 +42,7 @@ ive been watching TV for a long time. Ryan: I have been watching TV since I was 
 <br><br>
 
 ### 2.2. Generation with StopSequencer
-- If you look at the example, you can see that `Ryan: I have` is generated and then generation is finished.
-- Due to the limitation of Huggingface Transformers, after stop text (Ryan: ...) is generated, the generation can be terminated by checking conditions.
+If you look at the following generation result, you can see that `Ryan: I have` is contained in the generation result (`ive been watching TV for a long time. Ryan: I have`) and then generation is finished. Due to the limitation of Huggingface Transformers, after stop text (Ryan: ...) is generated, the generation can be terminated by checking conditions.
 
 ```python
 from stop_sequencer import StopSequencer
@@ -78,7 +77,7 @@ ive been watching TV for a long time. Ryan: I have
 <br><br>
 
 ### 3. Generation with StopSequencer + post-processing
-- Therefore, post-processing must be performed to completely exclude stop texts from generated text.
+Therefore, post-processing must be performed to completely exclude stop texts from generated text.
 ```python
 for s in stop_texts:
     outputs = outputs.split(s)[0].strip()
