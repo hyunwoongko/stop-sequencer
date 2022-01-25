@@ -1,6 +1,6 @@
 # Stop Sequencer
-- Implementation for stop sequencer for Huggingface Transformers
-- Because there is a limitation in implementation, post-processing must be used together.
+- Implementation of stop sequencer for Huggingface Transformers.
+- Note post-processing must be used together because limitation of transformers implementation.
 <br><br>
   
 ## 1. Installation
@@ -42,8 +42,6 @@ ive been watching TV for a long time. Ryan: I have been watching TV since I was 
 <br><br>
 
 ### 2.2. Generation with StopSequencer
-- If you look at the example, you can see that `Ryan: I have` is generated and then generation is finished.
-- Due to the limitation of Huggingface Transformers, after stop texts are generated, the generation can be terminated by checking conditions.
 
 ```python
 from stop_sequencer import StopSequencer
@@ -75,10 +73,11 @@ print(outputs)
 ```
 ive been watching TV for a long time. Ryan: I have
 ```
+You can see that `Ryan: I have` is contained in the generation result and then generation is finished. The generation can be terminated after stop text (`Ryan:`) is generated because of the limitation of Huggingface Transformers.
 <br><br>
 
 ### 3. Generation with StopSequencer + post-processing
-- Therefore, post-processing must be performed to completely exclude stop texts from generated text.
+Therefore, post-processing must be performed to completely exclude stop texts from generated text.
 ```python
 for s in stop_texts:
     outputs = outputs.split(s)[0].strip()

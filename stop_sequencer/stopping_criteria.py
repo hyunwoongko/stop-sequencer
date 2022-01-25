@@ -3,29 +3,6 @@ import torch
 from typing import List
 from transformers import StoppingCriteria
 
-
-def is_subset(l, s):
-    subset = False
-
-    if len(s) == 0:
-        return False
-    elif s == l:
-        return True
-    elif len(s) > len(l):
-        return False
-    else:
-        for i in range(len(l)):
-            if l[i] == s[0]:
-                n = 1
-                while (n < len(s)) and (l[i + n] == s[n]):
-                    n += 1
-
-                if n == len(s):
-                    subset = True
-
-    return subset
-
-
 class StopSequenceCriteria(StoppingCriteria):
 
     def __init__(
