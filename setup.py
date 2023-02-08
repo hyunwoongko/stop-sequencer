@@ -5,7 +5,7 @@ with open('README.md', encoding='utf-8') as f:
 
 setup(
     name='stop-sequencer',
-    version='1.2.1',
+    version='1.2.2',
     description='Implementation of stop sequencer for Huggingface Transformers',
     long_description=long_description,
     long_description_content_type='text/markdown',
@@ -14,7 +14,6 @@ setup(
     url='https://github.com/hyunwoongko/stop-sequencer',
     install_requires=[
         'transformers>=4<4.3.0',
-        'torch',
     ],
     packages=find_packages(),
     python_requires='>=3',
