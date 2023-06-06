@@ -13,7 +13,7 @@ setup(
     author_email='gusdnd852@naver.com',
     url='https://github.com/hyunwoongko/stop-sequencer',
     install_requires=[
-        'transformers>=4<4.3.0',
+        'transformers>=4.3.0',
     ],
     packages=find_packages(),
     python_requires='>=3',
